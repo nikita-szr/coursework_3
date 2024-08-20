@@ -1,6 +1,7 @@
 import requests
 import psycopg2
 
+
 def get_employee_data(employer_ids):
     """функция для получения данных о компаниях с сайта HH.ru"""
     employers = []
@@ -21,4 +22,4 @@ def get_vacancies_data(employer_ids):
     return vacancy
 
 
-employer_ids_list = [9694561, 4219, 5919632, 5667343, 9301808, 774144, 10571093, 198614, 6062708, 4306]
+# employer_ids_list = [9694561, 4219, 5919632, 5667343, 9301808, 774144, 10571093, 198614, 6062708, 4306]
