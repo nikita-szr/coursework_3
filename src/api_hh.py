@@ -1,5 +1,4 @@
 import requests
-import psycopg2
 
 
 def get_employee_data(employer_ids):
