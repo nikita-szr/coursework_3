@@ -4,7 +4,7 @@ import psycopg2
 def create_database(database_name: str, params: dict):
     """Функция создаёт базу данных и таблицы"""
 
-    conn = None
+    conn = None  # без этой строки ошибка, надо спросить почему
     try:
         conn = psycopg2.connect(dbname='postgres', **params)
         conn.autocommit = True
