@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25b58ef4-0ff1-4072-b793-327dc1b3d8ab" name="Changes" comment="small fix + utils" />
+    <list default="true" id="25b58ef4-0ff1-4072-b793-327dc1b3d8ab" name="Changes" comment="функции для заполнения таблиц">
+      <change afterPath="$PROJECT_DIR$/src/DBManager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,18 +28,18 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "nikita-szr"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;nikita-szr&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/nikita-szr/coursework_3",
-    "accountId": "79f6c51c-76f8-441c-bd64-782e9e54c5ff"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/nikita-szr/coursework_3&quot;,
+    &quot;accountId&quot;: &quot;79f6c51c-76f8-441c-bd64-782e9e54c5ff&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -46,14 +49,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.api_hh.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "develop",
-    "ignore.virus.scanning.warn.message": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.api_hh.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -118,7 +121,47 @@
       <option name="project" value="LOCAL" />
       <updated>1724177699703</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="создание бд + таблицы работодателей">
+      <option name="closed" value="true" />
+      <created>1724255084637</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1724255084637</updated>
+    </task>
+    <task id="LOCAL-00008" summary="таблица вакансий + блок try exept">
+      <option name="closed" value="true" />
+      <created>1724255502796</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1724255502796</updated>
+    </task>
+    <task id="LOCAL-00009" summary="вопрос">
+      <option name="closed" value="true" />
+      <created>1724255552033</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1724255552033</updated>
+    </task>
+    <task id="LOCAL-00010" summary="import fix">
+      <option name="closed" value="true" />
+      <created>1724255717115</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1724255717115</updated>
+    </task>
+    <task id="LOCAL-00011" summary="функции для заполнения таблиц">
+      <option name="closed" value="true" />
+      <created>1724261837000</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1724261837000</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -127,6 +170,11 @@
     <MESSAGE value="flake8" />
     <MESSAGE value="api response hh" />
     <MESSAGE value="small fix + utils" />
-    <option name="LAST_COMMIT_MESSAGE" value="small fix + utils" />
+    <MESSAGE value="создание бд + таблицы работодателей" />
+    <MESSAGE value="таблица вакансий + блок try exept" />
+    <MESSAGE value="вопрос" />
+    <MESSAGE value="import fix" />
+    <MESSAGE value="функции для заполнения таблиц" />
+    <option name="LAST_COMMIT_MESSAGE" value="функции для заполнения таблиц" />
   </component>
 </project>
