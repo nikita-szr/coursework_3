@@ -1,16 +1,12 @@
 from utils import create_database, save_data_to_database_emp, save_data_to_database_vac
 from DBManager import DBManager
 from api_hh import get_employee_data, get_vacancies_data, employer_ids_list
+from config import config
 
 
 def main():
-    params = {
-        'host': 'localhost',
-        'user': 'myuser',
-        'password': '12345678'
-    }
+    params = config()
     database_name = 'hh'
-
     data_emp = get_employee_data(employer_ids_list)
     data_vac = get_vacancies_data(employer_ids_list)
 
