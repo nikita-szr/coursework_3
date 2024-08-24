@@ -79,7 +79,8 @@ def save_data_to_database_vac(data_vac, database_name, params) -> None:
                     INSERT INTO vacancy (vacancy_id, vacancy_name, vacancy_area, salary, employer_id, vacancy_url)
                     VALUES (%s, %s, %s, %s, %s, %s)
                     ON CONFLICT (vacancy_id) DO NOTHING
-                    """, (vac.get('id'), vac.get('name'), vac.get('area', {}).get('name'), salary, vac.get('employer', {}).get('id'),
+                    """, (vac.get('id'), vac.get('name'), vac.get('area', {}).get('name'),
+                          salary, vac.get('employer', {}).get('id'),
                           vac.get('alternate_url')))
         conn.commit()
 

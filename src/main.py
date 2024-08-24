@@ -1,7 +1,8 @@
-from utils import create_database, save_data_to_database_emp, save_data_to_database_vac
-from DBManager import DBManager
-from api_hh import get_employee_data, get_vacancies_data, employer_ids_list
+from api_hh import employer_ids_list, get_employee_data, get_vacancies_data
 from config import config
+from DBManager import DBManager
+from utils import (create_database, save_data_to_database_emp,
+                   save_data_to_database_vac)
 
 
 def main():
