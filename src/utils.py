@@ -14,6 +14,7 @@ def create_database(database_name, params):
             cur.execute(sql.SQL('CREATE DATABASE {}').format(sql.Identifier(database_name)))
 
         conn.close()
+
         conn = psycopg2.connect(dbname=database_name, **params)
 
         with conn.cursor() as cur:
