@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25b58ef4-0ff1-4072-b793-327dc1b3d8ab" name="Changes" comment="функции для заполнения таблиц">
-      <change afterPath="$PROJECT_DIR$/src/DBManager.py" afterDir="false" />
+    <list default="true" id="25b58ef4-0ff1-4072-b793-327dc1b3d8ab" name="Changes" comment="readme">
+      <change afterPath="$PROJECT_DIR$/src/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,14 +50,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.api_hh.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.api_hh.executor": "Run",
+    "Python.main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "develop",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/nikit/OneDrive/Desktop/IT/PythonProjects/my_prj/course_work_1"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -161,7 +164,31 @@
       <option name="project" value="LOCAL" />
       <updated>1724261837000</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="класс для работы с бд">
+      <option name="closed" value="true" />
+      <created>1724344311154</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1724344311154</updated>
+    </task>
+    <task id="LOCAL-00013" summary="класс для работы с бд">
+      <option name="closed" value="true" />
+      <created>1724344656689</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1724344656689</updated>
+    </task>
+    <task id="LOCAL-00014" summary="readme">
+      <option name="closed" value="true" />
+      <created>1724345046005</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1724345046005</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -175,6 +202,8 @@
     <MESSAGE value="вопрос" />
     <MESSAGE value="import fix" />
     <MESSAGE value="функции для заполнения таблиц" />
-    <option name="LAST_COMMIT_MESSAGE" value="функции для заполнения таблиц" />
+    <MESSAGE value="класс для работы с бд" />
+    <MESSAGE value="readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="readme" />
   </component>
 </project>

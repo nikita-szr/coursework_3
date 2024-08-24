@@ -1,20 +1,19 @@
 import psycopg2
+from psycopg2 import sql
 
 
 def create_database(database_name, params):
     """Функция создаёт базу данных и таблицы"""
-
-    conn = None  # без этой строки ошибка, надо спросить почему
+    conn = None
     try:
         conn = psycopg2.connect(dbname='postgres', **params)
         conn.autocommit = True
 
         with conn.cursor() as cur:
-            cur.execute(f'DROP DATABASE IF EXISTS {database_name}')
-            cur.execute(f'CREATE DATABASE {database_name}')
+            cur.execute(sql.SQL('DROP DATABASE IF EXISTS {}').format(sql.Identifier(database_name)))
+            cur.execute(sql.SQL('CREATE DATABASE {}').format(sql.Identifier(database_name)))
 
         conn.close()
-
         conn = psycopg2.connect(dbname=database_name, **params)
 
         with conn.cursor() as cur:
@@ -28,7 +27,6 @@ def create_database(database_name, params):
             )
             """)
 
-        with conn.cursor() as cur:
             cur.execute("""
                 CREATE TABLE vacancy (
                     vacancy_id INTEGER PRIMARY KEY,
@@ -51,7 +49,6 @@ def create_database(database_name, params):
 def save_data_to_database_emp(data_emp, database_name, params) -> None:
     """Функция для заполнения таблицы работодателей в БД"""
     conn = psycopg2.connect(dbname=database_name, **params)
-
     try:
         with conn.cursor() as cur:
             for emp in data_emp:
@@ -59,9 +56,8 @@ def save_data_to_database_emp(data_emp, database_name, params) -> None:
                     INSERT INTO employers (employer_id, employer_name, employer_area, url, open_vacancies)
                     VALUES (%s, %s, %s, %s, %s)
                     ON CONFLICT (employer_id) DO NOTHING
-                    """, (emp['id'], emp['name'], emp['area']['name'], emp['alternate_url'],
-                          emp['open_vacancies']))
-
+                    """, (emp.get('id'), emp.get('name'), emp.get('area', {}).get('name'), emp.get('alternate_url'),
+                          emp.get('open_vacancies')))
         conn.commit()
 
     except Exception as e:
@@ -73,20 +69,17 @@ def save_data_to_database_emp(data_emp, database_name, params) -> None:
 
 def save_data_to_database_vac(data_vac, database_name, params) -> None:
     """Функция для заполнения таблицы вакансий в БД"""
-
     conn = psycopg2.connect(dbname=database_name, **params)
-
     try:
         with conn.cursor() as cur:
             for vac in data_vac:
-                salary = vac['salary']['from'] if vac['salary'] and vac['salary']['from'] is not None else None
+                salary = vac.get('salary', {}).get('from')
                 cur.execute("""
                     INSERT INTO vacancy (vacancy_id, vacancy_name, vacancy_area, salary, employer_id, vacancy_url)
                     VALUES (%s, %s, %s, %s, %s, %s)
                     ON CONFLICT (vacancy_id) DO NOTHING
-                    """, (vac['id'], vac['name'], vac['area']['name'], salary, vac['employer']['id'],
-                          vac['alternate_url']))
-
+                    """, (vac.get('id'), vac.get('name'), vac.get('area', {}).get('name'), salary, vac.get('employer', {}).get('id'),
+                          vac.get('alternate_url')))
         conn.commit()
 
     except Exception as e:

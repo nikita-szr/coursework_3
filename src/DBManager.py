@@ -13,11 +13,10 @@ class DBManager:
         self.cur.execute("""
         SELECT employers.employer_name, COUNT(vacancy.employer_id)
         FROM employers
-        JOIN vacancy USING (employer_id)
+        JOIN vacancy ON employers.employer_id = vacancy.employer_id
         GROUP BY employers.employer_name
         ORDER BY COUNT DESC
         """)
-
         return self.cur.fetchall()
 
     def get_all_vacancies(self):
@@ -26,14 +25,14 @@ class DBManager:
         self.cur.execute("""
         SELECT employers.employer_name, vacancy_name, salary, vacancy_url
         FROM vacancy
-        JOIN employers USING (employer_id)
-        ORDER BY salary desc""")
+        JOIN employers ON vacancy.employer_id = employers.employer_id
+        ORDER BY salary DESC""")
         return self.cur.fetchall()
 
     def get_avg_salary(self):
         """Получает среднюю зарплату по вакансиям"""
         self.cur.execute("""
-        SELECT avg(salary) from vacancy WHERE salary IS NOT NULL""")
+        SELECT AVG(salary) FROM vacancy WHERE salary IS NOT NULL""")
         return self.cur.fetchall()
 
     def get_vacancies_with_higher_salary(self):
@@ -41,7 +40,6 @@ class DBManager:
         self.cur.execute("""
         SELECT vacancy_name, salary
         FROM vacancy
-        GROUP BY vacancy_name, salary
         WHERE salary > (SELECT AVG(salary) FROM vacancy WHERE salary IS NOT NULL)
         ORDER BY salary DESC
         """)
@@ -51,7 +49,7 @@ class DBManager:
         """Получает список всех вакансий, в названии которых содержатся ключевые слова"""
         request_sql = """
         SELECT * FROM vacancy
-        WHERE LOWER (vacancy_name) LIKE %s
+        WHERE LOWER(vacancy_name) LIKE %s
         """
         self.cur.execute(request_sql, ('%' + keyword.lower() + '%',))
         return self.cur.fetchall()
